@@ -5,9 +5,8 @@ import { bindActionCreators, compose } from "redux";
 import { useTranslation, Trans } from "react-i18next";
 
 const Footer = () => {
-
     const { t, i18n } = useTranslation();
-    const changeLanguage = lng => {
+    const changeLanguage = lng => { 
         i18n.changeLanguage(lng)
     }
     return (

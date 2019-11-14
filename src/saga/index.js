@@ -1,8 +1,8 @@
-import {all, fork} from 'redux-saga/effects';
-import * as translateSaga from './translateSaga';
-
-export default function * rootSaga() {
+import { all, fork } from 'redux-saga/effects';
+import * as authSaga from './authSaga';
+import * as getPictureSaga from './getPictureSaga'
+export default function* rootSaga() {
     yield all(
-        [...Object.values(translateSaga)].map(fork)
+        [...Object.values(authSaga), ...Object.values(getPictureSaga)].map(fork)
     )
 }
